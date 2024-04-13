@@ -5,7 +5,7 @@ A bare minimum miner with a Cortex-A53 Allwinner H616 SoC made with KiCad
 
 
 <p align="center">
-     <img width="900" src="https://github.com/TechyGuy17/kryptokrona-mini-miner/blob/main/pics/main.png">
+     <img width="299" src="https://github.com/TechyGuy17/kryptokrona-mini-miner/blob/main/pics/main.png">
 </p>
 
 ## Overview
