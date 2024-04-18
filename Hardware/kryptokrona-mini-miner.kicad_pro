@@ -414,7 +414,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "H616_devboard.kicad_pro",
+    "filename": "kryptokrona-mini-miner.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -617,7 +617,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "H616_smartphone.dsn",
-      "step": "",
+      "step": "kryptokrona-mini-miner.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

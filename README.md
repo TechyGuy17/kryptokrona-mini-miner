@@ -1,6 +1,6 @@
 ** THE HARDWARE IS CURRENTLY NOT TESTED **
 
-# Allwinner_H616_Devboard
+# Kryptokrona mini miner
 A bare minimum miner with a Cortex-A53 Allwinner H616 SoC made with KiCad
 
 
@@ -18,4 +18,4 @@ The board features 64-bit 1.5GHz Quad-Core Cortex-A53 Allwinner H616 SOC, up to 
 There are [KiCad project](/Hardware), [Gerber files](/Hardware/gerber) and [PDF](/Hardware/output.pdf) avaliable.
 
 ## Software
-To be contiuned.
+Due to the use of the more accessable AXP313A there is no real prepared OS image, I have successfully built a test version but will find a way to make it more usable when I can try it in real life

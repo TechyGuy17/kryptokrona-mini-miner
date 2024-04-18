@@ -3308,7 +3308,7 @@
     )
     (pin "1" (uuid c29c0b0e-ed94-44ca-a0c8-36c8db06cab0))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR02") (unit 1)
         )
@@ -3333,7 +3333,7 @@
     )
     (pin "1" (uuid f2b51767-e46d-4897-a511-5fdab31f8d49))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR08") (unit 1)
         )
@@ -3359,7 +3359,7 @@
     (pin "1" (uuid 5b60f9b8-aedb-4988-817a-0c3fb331ddb4))
     (pin "2" (uuid df92d868-ad2e-4bb3-b2ee-745c07f15e99))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C10") (unit 1)
         )
@@ -3385,7 +3385,7 @@
     (pin "1" (uuid 78d30d0c-76d3-4487-adcf-1d555883c83e))
     (pin "2" (uuid 51d8d59d-32e6-4e0f-a6be-233f1215df4c))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C14") (unit 1)
         )
@@ -3410,7 +3410,7 @@
     )
     (pin "1" (uuid c132e47f-b928-4841-8fc3-da1553cd4cbe))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR01") (unit 1)
         )
@@ -3436,7 +3436,7 @@
     (pin "1" (uuid 075c4da7-a546-4989-abab-907698b64ba2))
     (pin "2" (uuid ca26545c-bbc9-4b01-99e9-64224d195aad))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "R2") (unit 1)
         )
@@ -3462,7 +3462,7 @@
     (pin "1" (uuid 28ae9e8d-b03c-462d-adcd-5b0c8b2620b0))
     (pin "2" (uuid 71d538a1-bbd9-4ae5-96e4-a9c26b34171c))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C3") (unit 1)
         )
@@ -3488,7 +3488,7 @@
     (pin "1" (uuid a18b4b8c-ead9-45bb-8358-be97120838ec))
     (pin "2" (uuid 84cc53ca-5a54-45e8-8799-4e01827f6507))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "R4") (unit 1)
         )
@@ -3513,7 +3513,7 @@
     )
     (pin "1" (uuid 2a03e817-cbc2-4974-bdf3-76f19389d80f))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR03") (unit 1)
         )
@@ -3539,7 +3539,7 @@
     (pin "1" (uuid b2038f67-fbf3-4d9c-9279-e7398954bd7f))
     (pin "2" (uuid babc99ab-131e-4738-94c0-d04d3ec5a026))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C9") (unit 1)
         )
@@ -3565,7 +3565,7 @@
     (pin "1" (uuid f46cd298-fd9f-431a-a402-a6fddebf4a53))
     (pin "2" (uuid d976a903-bdd2-4fa7-ae70-375e0ed6ec58))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C8") (unit 1)
         )
@@ -3590,7 +3590,7 @@
     )
     (pin "1" (uuid 9ccb004c-3d68-4057-89f7-ca35e771ee13))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR04") (unit 1)
         )
@@ -3616,7 +3616,7 @@
     (pin "1" (uuid 34249d02-bb1c-46a5-8054-c7f14078754c))
     (pin "2" (uuid 549f5cf7-d2b2-49bd-b287-ce403dfc399a))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "R3") (unit 1)
         )
@@ -3642,7 +3642,7 @@
     (pin "1" (uuid d5a8fc9e-dc4b-41e9-abd5-cf61f21e2f39))
     (pin "2" (uuid 855d34ec-5d8d-4f34-b958-e9237fb12eb4))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "R5") (unit 1)
         )
@@ -3668,7 +3668,7 @@
     (pin "1" (uuid cd70f2cb-69f3-444d-82fe-ea55e6744fe6))
     (pin "2" (uuid dedc314e-3dba-4001-8790-64623840ad62))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C7") (unit 1)
         )
@@ -3693,7 +3693,7 @@
     )
     (pin "1" (uuid 164b41d2-ea33-46f8-8b20-1ec30a2bad9b))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR05") (unit 1)
         )
@@ -3719,7 +3719,7 @@
     (pin "1" (uuid 67466cf6-6946-446d-9f30-de817fda67c9))
     (pin "2" (uuid e88b711c-0cdd-46a4-ac9a-427a14d36549))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C6") (unit 1)
         )
@@ -3744,7 +3744,7 @@
     )
     (pin "1" (uuid 73fc797c-b2f8-40c9-b1d0-a481f9d9fabb))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR06") (unit 1)
         )
@@ -3770,7 +3770,7 @@
     (pin "1" (uuid 5276d8e1-62a3-4365-9207-9761a168d0fd))
     (pin "2" (uuid b944a4d8-8b95-44fc-afe1-3b5c58900c93))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C1") (unit 1)
         )
@@ -3795,7 +3795,7 @@
     )
     (pin "1" (uuid 4a6d7dc3-714f-4ab5-b811-77a3bca30568))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR07") (unit 1)
         )
@@ -3821,7 +3821,7 @@
     (pin "1" (uuid d677c129-e4d7-4004-8c1e-39ca711ebd2b))
     (pin "2" (uuid 3c146077-690c-4c08-b28e-f170c7f49a5c))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C4") (unit 1)
         )
@@ -3847,7 +3847,7 @@
     (pin "1" (uuid ccc98b00-56b2-4b78-a28a-8ad372a1f78f))
     (pin "2" (uuid c442dab5-c962-457f-9011-8b9887a0a712))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C11") (unit 1)
         )
@@ -3873,7 +3873,7 @@
     (pin "1" (uuid db2a7cf1-414c-4e94-b8b3-6d90eb881346))
     (pin "2" (uuid 09f0cece-9146-43b9-aac5-41624ab27276))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "R6") (unit 1)
         )
@@ -3899,7 +3899,7 @@
     (pin "1" (uuid 36891242-c153-42d0-94fe-4e4510253266))
     (pin "2" (uuid e64896de-cd8b-404f-84b9-28a2a54f673f))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C5") (unit 1)
         )
@@ -3925,7 +3925,7 @@
     (pin "1" (uuid d07366fa-ab13-44c4-968c-4c43211a57e7))
     (pin "2" (uuid 2a1603ce-61c9-4641-9302-9bf839e3f80a))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C12") (unit 1)
         )
@@ -3950,7 +3950,7 @@
     )
     (pin "1" (uuid b1fd7cbd-c8dd-4981-bd8d-a8d27f27851f))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "#PWR09") (unit 1)
         )
@@ -4070,7 +4070,7 @@
     (pin "M8" (uuid 0e4f7cb1-ce2d-4db1-a5a8-1ac980e12c54))
     (pin "N8" (uuid ef575b88-7690-4823-b66b-3b36b8d0ed8b))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "U2") (unit 1)
         )
@@ -4096,7 +4096,7 @@
     (pin "1" (uuid 2f3578cf-bf82-422c-9891-721bcf6c46eb))
     (pin "2" (uuid 23654200-b997-4591-b6d9-fc4906517486))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C13") (unit 1)
         )
@@ -4122,7 +4122,7 @@
     (pin "1" (uuid 94ab1b11-76ba-4ca6-b68a-bc8f15a7cdd8))
     (pin "2" (uuid f9aa55a2-5813-4b79-8776-2028807f30fc))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "R1") (unit 1)
         )
@@ -4148,7 +4148,7 @@
     (pin "1" (uuid bd63c771-a508-43f1-a3f6-df46587fb11a))
     (pin "2" (uuid 50dcf608-8ba4-43b3-a947-aaa42f9bcc9f))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "C2") (unit 1)
         )
@@ -4455,7 +4455,7 @@
     (pin "V21" (uuid 92b2b0f6-643b-422b-8785-85b588073045))
     (pin "V5" (uuid fbdbd372-eb51-45a0-8f73-5f329db2b43c))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/2a0ab7b4-b95c-4f2e-a58a-6fd53ad0fdf3"
           (reference "U1") (unit 1)
         )

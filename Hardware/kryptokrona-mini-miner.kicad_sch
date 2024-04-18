@@ -19,7 +19,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc" (page "2"))
       )
     )
@@ -36,7 +36,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc" (page "3"))
       )
     )
@@ -53,7 +53,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc" (page "4"))
       )
     )
@@ -70,7 +70,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc" (page "5"))
       )
     )
@@ -87,7 +87,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc" (page "6"))
       )
     )

@@ -5,6 +5,41 @@
   (paper "A4")
 
   (lib_symbols
+    (symbol "Connector:TestPoint" (pin_numbers hide) (pin_names (offset 0.762) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "TP" (at 0 6.858 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "TestPoint" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "test point tp" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "test point" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Pin* Test*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "TestPoint_0_1"
+        (circle (center 0 3.302) (radius 0.762)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "TestPoint_1_1"
+        (pin passive line (at 0 0 90) (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Connector:USB_A" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at -5.08 11.43 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -933,6 +968,9 @@
   (junction (at 165.735 78.74) (diameter 0) (color 0 0 0 0)
     (uuid 68dd1ab0-f824-4e42-8d68-eb022dfc39b4)
   )
+  (junction (at 81.28 63.5) (diameter 0) (color 0 0 0 0)
+    (uuid 6d54eb82-f813-4c92-a3db-27bcf7c96502)
+  )
   (junction (at 140.335 78.74) (diameter 0) (color 0 0 0 0)
     (uuid 755d56f5-e229-45ea-b05e-115a063fe5a1)
   )
@@ -959,6 +997,9 @@
   )
   (junction (at 127.635 55.88) (diameter 0) (color 0 0 0 0)
     (uuid f5ae259a-c449-456b-b3f5-0443667e0eeb)
+  )
+  (junction (at 81.28 60.96) (diameter 0) (color 0 0 0 0)
+    (uuid fc4e97cb-5e2a-4e18-87e8-f1241f8755d7)
   )
   (junction (at 147.955 48.26) (diameter 0) (color 0 0 0 0)
     (uuid fd55122f-c1e9-48d6-8df8-14c25342a416)
@@ -988,6 +1029,10 @@
   (wire (pts (xy 191.77 102.87) (xy 196.85 102.87))
     (stroke (width 0) (type default))
     (uuid 0114987c-2c4f-4420-9490-0009043ed524)
+  )
+  (wire (pts (xy 81.28 60.96) (xy 90.805 60.96))
+    (stroke (width 0) (type default))
+    (uuid 0c937128-2333-4fa4-a688-53533ce9a79b)
   )
   (wire (pts (xy 165.735 73.66) (xy 165.735 76.2))
     (stroke (width 0) (type default))
@@ -1021,9 +1066,17 @@
     (stroke (width 0) (type default))
     (uuid 5620a5ac-b84e-459f-a406-00a2e0dde4ff)
   )
+  (wire (pts (xy 80.01 60.96) (xy 81.28 60.96))
+    (stroke (width 0) (type default))
+    (uuid 60c078f8-57a3-4174-96d6-b4e5d32adf8c)
+  )
   (wire (pts (xy 137.795 55.88) (xy 147.955 55.88))
     (stroke (width 0) (type default))
     (uuid 65a1b64a-c12e-4561-9cd2-e0e304214096)
+  )
+  (wire (pts (xy 81.28 63.5) (xy 90.805 63.5))
+    (stroke (width 0) (type default))
+    (uuid 7c438617-e7d5-42d8-bb97-85249643d399)
   )
   (wire (pts (xy 117.475 53.34) (xy 103.505 53.34))
     (stroke (width 0) (type default))
@@ -1041,7 +1094,7 @@
     (stroke (width 0) (type default))
     (uuid 98119380-ddc2-4bb2-904c-d0b6ed9eda1b)
   )
-  (wire (pts (xy 89.535 63.5) (xy 90.805 63.5))
+  (wire (pts (xy 78.74 63.5) (xy 81.28 63.5))
     (stroke (width 0) (type default))
     (uuid 99aacc22-ff77-49f8-af24-b7a8bddf048c)
   )
@@ -1130,10 +1183,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "TXConvOut" (shape input) (at 90.805 60.96 180) (fields_autoplaced)
+  (global_label "TXConvOut" (shape input) (at 80.01 60.96 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 2996b676-9178-4db9-9874-58888eb03cab)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 77.9019 60.96 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 67.1069 60.96 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1144,10 +1197,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "RXConvIn" (shape input) (at 89.535 63.5 180) (fields_autoplaced)
+  (global_label "RXConvIn" (shape input) (at 78.74 63.5 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid d21ce17b-5710-43f2-aa8a-6d8d0ba16715)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 77.7809 63.5 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.9859 63.5 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1170,7 +1223,7 @@
     (pin "1" (uuid 9075e82f-8c6d-41c1-a75a-59028697d239))
     (pin "2" (uuid 32423ffe-202a-4768-a754-9f41b9076560))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "R21") (unit 1)
         )
@@ -1195,7 +1248,7 @@
     )
     (pin "1" (uuid 39fc2525-7345-4fa1-803a-c2f3102ac386))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR095") (unit 1)
         )
@@ -1220,9 +1273,34 @@
     )
     (pin "1" (uuid cc63574f-d315-47c3-a658-3c8697b0f8d5))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR010") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 81.28 60.96 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 1340d31c-ae08-4f55-af65-3e9b680a6f9d)
+    (property "Reference" "TP1" (at 82.55 58.42 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 77.47 54.61 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" (at 86.36 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 86.36 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 80072ce1-1d71-46c7-a547-7a895fc54285))
+    (instances
+      (project "kryptokrona-mini-miner"
+        (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
+          (reference "TP1") (unit 1)
         )
       )
     )
@@ -1245,7 +1323,7 @@
     )
     (pin "1" (uuid fcb0dd89-45bd-49eb-9f36-5ac51bbe87aa))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR093") (unit 1)
         )
@@ -1272,7 +1350,7 @@
     (pin "1" (uuid 5dbcf009-f574-43d8-b625-8eeed3cc5f91))
     (pin "2" (uuid 0c491c0d-6548-4c1e-8815-33374cfd897b))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "D3") (unit 1)
         )
@@ -1313,7 +1391,7 @@
     (pin "B9" (uuid 657fd2bf-5f51-4936-b164-b3f9ed52461e))
     (pin "S1" (uuid 1b4acc0c-883f-4ccc-96dc-a32ad4fd302c))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "J2") (unit 1)
         )
@@ -1339,7 +1417,7 @@
     (pin "1" (uuid 69d033dd-d91b-4715-994d-18ebc04f77f9))
     (pin "2" (uuid 240b5c63-53e8-4c8d-8dbd-5b01fba24f0e))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "R22") (unit 1)
         )
@@ -1392,7 +1470,7 @@
     (pin "8" (uuid e55bcfcc-9e5e-47a3-9284-64ff4465c2d7))
     (pin "9" (uuid e833fb71-a332-4c6f-bda9-dc0725fe0bed))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "U4") (unit 1)
         )
@@ -1417,7 +1495,7 @@
     )
     (pin "1" (uuid 0ec3c892-c131-4ecc-9af0-31910cc6d75a))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR096") (unit 1)
         )
@@ -1446,7 +1524,7 @@
     (pin "2" (uuid c6efd6a8-0221-48aa-9931-ebbfeb731aa2))
     (pin "5" (uuid a72604c0-3b29-420e-a79f-fd7c6aaeeab3))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "J3") (unit 1)
         )
@@ -1471,7 +1549,7 @@
     )
     (pin "1" (uuid a088457e-6ad7-4719-9fb6-cb8827d86d40))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR089") (unit 1)
         )
@@ -1496,7 +1574,7 @@
     )
     (pin "1" (uuid bfe3ceeb-0fd7-4569-b0cc-4c4d97b9d557))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR090") (unit 1)
         )
@@ -1521,7 +1599,7 @@
     )
     (pin "1" (uuid 9f3fe7d3-33db-49d9-9a79-ab76de274db7))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR087") (unit 1)
         )
@@ -1547,7 +1625,7 @@
     (pin "1" (uuid f8b0fdbf-6ddc-4584-92f1-d3374b403180))
     (pin "2" (uuid da687083-f9cf-43b2-99f3-566a84cadb10))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "C66") (unit 1)
         )
@@ -1572,7 +1650,7 @@
     )
     (pin "1" (uuid d054500d-ae4b-4d86-8e57-b0e6b32a49d5))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR092") (unit 1)
         )
@@ -1597,7 +1675,7 @@
     )
     (pin "1" (uuid f14909cf-6266-4118-aaee-63993590f4f0))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR094") (unit 1)
         )
@@ -1622,7 +1700,7 @@
     )
     (pin "1" (uuid 6dabf41c-02d0-45e3-bbb8-c863c2d348b5))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR097") (unit 1)
         )
@@ -1647,7 +1725,7 @@
     )
     (pin "1" (uuid 981d99ce-f5da-496b-b3fc-1a24cb71b8ae))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR088") (unit 1)
         )
@@ -1673,7 +1751,7 @@
     (pin "1" (uuid 886dc5e4-5d1a-461c-91f3-781b3d0bb590))
     (pin "2" (uuid 133dee04-8d05-4cce-80a2-8971a8df7e95))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "C67") (unit 1)
         )
@@ -1699,7 +1777,7 @@
     (pin "1" (uuid c457e4c6-4ead-4483-8468-017c62bc7736))
     (pin "2" (uuid e66f482a-9540-4220-a68f-df7b18eebb9d))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "C69") (unit 1)
         )
@@ -1725,7 +1803,7 @@
     (pin "1" (uuid 3fb38fc2-bc9f-4d30-8720-767983223443))
     (pin "2" (uuid cdfec2be-4ab7-4382-b413-fc323c7189c0))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "C68") (unit 1)
         )
@@ -1751,7 +1829,7 @@
     (pin "1" (uuid a2677770-d397-45f0-86b5-edeeab177a73))
     (pin "2" (uuid cebf3477-1946-44ab-8305-8eab1387d092))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "D4") (unit 1)
         )
@@ -1777,7 +1855,7 @@
     (pin "1" (uuid 8058fdb6-9702-4c04-8e84-e40e2bd932b2))
     (pin "2" (uuid e5ec1e0a-b1d8-41f0-865f-0ecec72073e2))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "C65") (unit 1)
         )
@@ -1802,9 +1880,34 @@
     )
     (pin "1" (uuid c6b86904-8fd3-4ee9-8305-83c405c9da6b))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "#PWR086") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 81.28 63.5 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid e52b8008-a554-40db-9ad1-9714306974e5)
+    (property "Reference" "TP6" (at 82.55 66.04 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "TestPoint" (at 74.93 69.85 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" (at 76.2 63.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 76.2 63.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e43bccf5-9db4-468a-8c56-b3760bb7a18d))
+    (instances
+      (project "kryptokrona-mini-miner"
+        (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
+          (reference "TP6") (unit 1)
         )
       )
     )
@@ -1828,7 +1931,7 @@
     (pin "1" (uuid 50e8aa1e-77a7-4254-b929-82c362e594ee))
     (pin "2" (uuid c6975142-095a-497c-8715-de14a283aa13))
     (instances
-      (project "H616_devboard"
+      (project "kryptokrona-mini-miner"
         (path "/44f68964-8d75-4db0-b784-705712e148bc/95399e0d-575a-4500-9429-e4d55ac775b9"
           (reference "R25") (unit 1)
         )
