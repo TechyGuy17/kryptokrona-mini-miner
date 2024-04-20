@@ -1,0 +1,194 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: TechyGuy17 <techy@kryptokrona.org>
+Date: Sat, 20 Apr 2024 18:37:36 +0000
+Subject: updated to axp313a
+
+Signed-off-by: TechyGuy17 <techy@kryptokrona.org>
+---
+ arch/arm64/boot/dts/allwinner/sun50i-h616-orangepi-zero2.dts | 116 +++-------
+ 1 file changed, 32 insertions(+), 84 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/allwinner/sun50i-h616-orangepi-zero2.dts b/arch/arm64/boot/dts/allwinner/sun50i-h616-orangepi-zero2.dts
+index d8a019fd4f7c..45b9df9ddcca 100644
+--- a/arch/arm64/boot/dts/allwinner/sun50i-h616-orangepi-zero2.dts
++++ b/arch/arm64/boot/dts/allwinner/sun50i-h616-orangepi-zero2.dts
+@@ -11,144 +11,92 @@ / {
+ 	model = "OrangePi Zero2";
+ 	compatible = "xunlong,orangepi-zero2", "allwinner,sun50i-h616";
+ };
+ 
+ &cpu0  {
+-	cpu-supply = <&reg_dcdca>;
++	cpu-supply = <&reg_dcdc2>;
+ 	status = "okay";
+ };
+ 
+ &emac0 {
+ 	allwinner,rx-delay-ps = <3100>;
+ 	allwinner,tx-delay-ps = <700>;
+ 	phy-mode = "rgmii";
+-	phy-supply = <&reg_dcdce>;
++	phy-supply = <&reg_dldo1>;
+ };
+ 
+ &gpu {
+-	mali-supply = <&reg_dcdcc>;
++	mali-supply = <&reg_dcdc1>;
+ 	status = "okay";
+ };
+ 
+ &hdmi {
+-	hvcc-supply = <&reg_bldo1>;
++	hvcc-supply = <&reg_dldo1>;
+ };
+ 
+ &mmc0 {
+-	vmmc-supply = <&reg_dcdce>;
++	vmmc-supply = <&reg_dldo1>;
+ };
+ 
+-&r_rsb {
++&r_i2c {
+ 	status = "okay";
+ 
+-	axp305: pmic@745 {
+-		compatible = "x-powers,axp305", "x-powers,axp805",
+-			     "x-powers,axp806";
+-		interrupt-controller;
++	axp313: pmic@36 {
++		compatible = "x-powers,axp313a";
++		reg = <0x36>;
+ 		#interrupt-cells = <1>;
+-		reg = <0x745>;
+-
+-		x-powers,self-working-mode;
+-		vina-supply = <&reg_vcc5v>;
+-		vinb-supply = <&reg_vcc5v>;
+-		vinc-supply = <&reg_vcc5v>;
+-		vind-supply = <&reg_vcc5v>;
+-		vine-supply = <&reg_vcc5v>;
+-		aldoin-supply = <&reg_vcc5v>;
+-		bldoin-supply = <&reg_vcc5v>;
+-		cldoin-supply = <&reg_vcc5v>;
++		interrupt-controller;
++		interrupt-parent = <&pio>;
++		interrupts = <2 9 IRQ_TYPE_LEVEL_LOW>;	/* PC9 */
++
++		vin1-supply = <&reg_vcc5v>;
++		vin2-supply = <&reg_vcc5v>;
++		vin3-supply = <&reg_vcc5v>;
+ 
+ 		regulators {
++			/* Supplies VCC-PLL and DRAM */
+ 			reg_aldo1: aldo1 {
+-				regulator-always-on;
+-				regulator-min-microvolt = <3300000>;
+-				regulator-max-microvolt = <3300000>;
+-				regulator-name = "vcc-sys";
+-			};
+-
+-			reg_aldo2: aldo2 {	/* 3.3V on headers */
+-				regulator-always-on;
+-				regulator-min-microvolt = <3300000>;
+-				regulator-max-microvolt = <3300000>;
+-				regulator-name = "vcc3v3-ext";
+-			};
+-
+-			reg_aldo3: aldo3 {	/* 3.3V on headers */
+-				regulator-always-on;
+-				regulator-min-microvolt = <3300000>;
+-				regulator-max-microvolt = <3300000>;
+-				regulator-name = "vcc3v3-ext2";
+-			};
+-
+-			reg_bldo1: bldo1 {
+ 				regulator-always-on;
+ 				regulator-min-microvolt = <1800000>;
+ 				regulator-max-microvolt = <1800000>;
+ 				regulator-name = "vcc1v8";
+ 			};
+ 
+-			bldo2 {
+-				/* unused */
+-			};
+-
+-			bldo3 {
+-				/* unused */
+-			};
+-
+-			bldo4 {
+-				/* unused */
+-			};
+-
+-			cldo1 {
+-				/* reserved */
+-			};
+-
+-			cldo2 {
+-				/* unused */
+-			};
+-
+-			cldo3 {
+-				/* unused */
+-			};
+-
+-			reg_dcdca: dcdca {
++			/* Supplies VCC-IO, so needs to be always on. */
++			reg_dldo1: dldo1 {
+ 				regulator-always-on;
+-				regulator-min-microvolt = <810000>;
+-				regulator-max-microvolt = <1100000>;
+-				regulator-name = "vdd-cpu";
++				regulator-min-microvolt = <3300000>;
++				regulator-max-microvolt = <3300000>;
++				regulator-name = "vcc3v3";
+ 			};
+ 
+-			reg_dcdcc: dcdcc {
++			reg_dcdc1: dcdc1 {
+ 				regulator-always-on;
+ 				regulator-min-microvolt = <810000>;
+ 				regulator-max-microvolt = <990000>;
+ 				regulator-name = "vdd-gpu-sys";
+ 			};
+ 
+-			reg_dcdcd: dcdcd {
++			reg_dcdc2: dcdc2 {
+ 				regulator-always-on;
+-				regulator-min-microvolt = <1500000>;
+-				regulator-max-microvolt = <1500000>;
+-				regulator-name = "vdd-dram";
++				regulator-min-microvolt = <810000>;
++				regulator-max-microvolt = <1100000>;
++				regulator-name = "vdd-cpu";
+ 			};
+ 
+-			reg_dcdce: dcdce {
++			reg_dcdc3: dcdc3 {
+ 				regulator-always-on;
+-				regulator-min-microvolt = <3300000>;
+-				regulator-max-microvolt = <3300000>;
+-				regulator-name = "vcc-eth-mmc";
+-			};
+-
+-			sw {
+-				/* unused */
++				regulator-min-microvolt = <1100000>;
++				regulator-max-microvolt = <1100000>;
++				regulator-name = "vdd-dram";
+ 			};
+ 		};
+ 	};
+ };
+ 
+ &pio {
+ 	vcc-pc-supply = <&reg_aldo1>;
+ 	vcc-pf-supply = <&reg_aldo1>;
+-	vcc-pg-supply = <&reg_bldo1>;
++	vcc-pg-supply = <&reg_dldo1>;
+ 	vcc-ph-supply = <&reg_aldo1>;
+ 	vcc-pi-supply = <&reg_aldo1>;
+ };
+-- 
+Created with Armbian build tools https://github.com/armbian/build
+

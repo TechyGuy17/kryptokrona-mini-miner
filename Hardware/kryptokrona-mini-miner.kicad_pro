@@ -617,7 +617,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "H616_smartphone.dsn",
-      "step": "kryptokrona-mini-miner.step",
+      "step": "../../OneDrive/Documents/kryptokrona-mini-miner.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

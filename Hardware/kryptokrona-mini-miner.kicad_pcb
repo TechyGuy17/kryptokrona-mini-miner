@@ -1828,8 +1828,8 @@
       (net 3 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp 01be6f11-1d3a-4fbf-9ec7-eb847e9de47c))
     (pad "S1" thru_hole oval (at 4.32 2.24 90) (size 1.7 0.9) (drill oval 1.4 0.6) (layers "*.Cu" "*.Mask")
       (net 3 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp 07512545-5c14-4bca-81a0-aeefabdf230b))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_Palconn_UTC16-G.wrl"
-      (offset (xyz 0 0 0))
+    (model "${KICAD7_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
+      (offset (xyz 0 -1.25 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -3661,10 +3661,10 @@
       (net 3 "GND") (pinfunction "Shield") (pintype "passive") (tstamp 58bab8e1-f731-447e-be1b-c14ee43a515b))
     (pad "5" thru_hole circle (at 10.07 2.71 180) (size 3 3) (drill 2.3) (layers "*.Cu" "*.Mask")
       (net 3 "GND") (pinfunction "Shield") (pintype "passive") (tstamp 6083f229-b0a4-4573-9fe2-6532ad63d20a))
-    (model "${KICAD7_3DMODEL_DIR}/Connector_USB.3dshapes/USB_A_TE_292303-7_Horizontal.wrl" hide
-      (offset (xyz 0 0 0))
+    (model "${KICAD7_3DMODEL_DIR}/Connector_USB.3dshapes/676430910.stp"
+      (offset (xyz 3.5 2.25 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 0))
     )
   )
 

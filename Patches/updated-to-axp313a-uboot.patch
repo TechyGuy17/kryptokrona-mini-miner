@@ -1,0 +1,30 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: TechyGuy17 <techy@kryptokrona.org>
+Date: Sat, 20 Apr 2024 18:45:19 +0000
+Subject: updating to axp313
+
+Signed-off-by: TechyGuy17 <techy@kryptokrona.org>
+---
+ configs/orangepi_zero2_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configs/orangepi_zero2_defconfig b/configs/orangepi_zero2_defconfig
+index 945756b2b7..6c299b4919 100644
+--- a/configs/orangepi_zero2_defconfig
++++ b/configs/orangepi_zero2_defconfig
+@@ -18,11 +18,11 @@ CONFIG_SYS_I2C_MVTWSI=y
+ CONFIG_SYS_I2C_SLAVE=0x7f
+ CONFIG_SYS_I2C_SPEED=400000
+ CONFIG_SPI_FLASH_MACRONIX=y
+ CONFIG_PHY_REALTEK=y
+ CONFIG_SUN8I_EMAC=y
+-CONFIG_AXP305_POWER=y
++CONFIG_AXP313_POWER=y
+ CONFIG_SPI=y
+ CONFIG_USB_EHCI_HCD=y
+ CONFIG_USB_OHCI_HCD=y
+ CONFIG_USB_MUSB_GADGET=y
+ CONFIG_PWRLED="PC12"
+-- 
+Created with Armbian build tools https://github.com/armbian/build
+
