@@ -37,9 +37,11 @@ Now we will do a dry run of the builder to let it download all the sources and a
 
 ```./compile.sh build BOARD=orangepizero2 BRANCH=current BUILD_DESKTOP=no BUILD_MINIMAL=yes KERNEL_CONFIGURE=no RELEASE=bookworm```
 
-Now we are ready to start doing the patching. If you havent moved around the folders you can use this oneliner to do the whole process
+Now we are ready to start doing the patching. If you havent moved around the folders you can use theese commands to do the whole process
 
-```mkdir userpatches/kernel/archive/sunxi-6.6 && cp ../kryptokrona-mini-miner/Patches/updated-tp-axp313a.patch userpatches/kernel/archive/sunxi-6.6 && cp ../kryptokrona-mini-miner/Patches/updated-tp-axp313a-uboot.patch userpatches/u-boot/u-boot-sunxi```
+```mkdir userpatches/kernel/archive/sunxi-6.6```
+```cp ../kryptokrona-mini-miner/Patches/updated-tp-axp313a.patch userpatches/kernel/archive/sunxi-6.6 ```
+```cp ../kryptokrona-mini-miner/Patches/updated-tp-axp313a-uboot.patch userpatches/u-boot/u-boot-sunxi```
 
 What this does is move in a few files that make it so we switch out everything regarding the AXP305 to 313a
 
