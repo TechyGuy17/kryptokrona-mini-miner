@@ -57,7 +57,7 @@ After this, you should have an image ready to be flashed to a SD card and then r
 If you want XKRig (XMRig) preinstalled to your keep on reading!
 
 Run the following command to move the required script to the right folder 
-```mv ../kryptokrona-mini-miner/Patches/customie-image.sh userpatches```
+```mv ../kryptokrona-mini-miner/Patches/customize-image.sh userpatches```
 
 When this is in place, rerun the compile 
 
