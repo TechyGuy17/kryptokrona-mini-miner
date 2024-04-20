@@ -54,7 +54,7 @@ Now we are ready to build for real!
 After this, you should have an image ready to be flashed to a SD card and then ready to be booted! Plug in an wifi/ethernet adapter in the board and a USB-c cable from your computer to the miner and then it should light up! The board will show up as a serial device and can be accessed through software like puTTY or minicom. settings are 115200,8,1 meaning 115200 baud rate, 8 bits and one stop bit.
 
 # Bonus
-If you want xmrig preinstalled to your keep on reading!
+If you want XKRig (XMRig) preinstalled to your keep on reading!
 
 Run the following command to move the required script to the right folder 
 ```mv ../kryptokrona-mini-miner/Patches/customie-image.sh userpatches```
