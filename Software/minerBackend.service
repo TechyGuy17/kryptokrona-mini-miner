@@ -1,0 +1,13 @@
+[Unit]
+Description=Backend and webserver for XKRig miner
+After=network.service
+
+[Service]
+Type=simple
+WorkingDirectory=/miner/Dashboard
+ExecStart=python3 server.py
+RestartSec=15
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

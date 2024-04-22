@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    
+    <title>Kryptokrona Mini Miner</title>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.3/jquery.timeago.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet"  type="text/css" href="{{url_for('.static', filename='styles.css')}}">
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <h2>Kryptokrona Miner</h2>
+        <div id="poolStats" class="row">
+            <div id="Stats">  
+                <div id="networkStats"> 
+                    <div id="networkStatsKryptokrona">
+                        <div class="col-lg-3 col-sm-4">
+                            <div class="infoBox hoverExpandEffect mergedBg">
+                                <div class="icon">
+                                    <span class="fa fa-dashboard"></span>
+                                </div>
+                                <div class="content">
+                                    <div class="text"><span data-tkey="networkHashrate">Network Hash Rate (H/s)</span> </div>
+                                    <div class="value"><span id="networkHashrateKryptokrona">{{data["networkHashrate"]}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4">
+                            <div class="infoBox hoverExpandEffect mergedBg">
+                                <div class="icon">
+                                    <span class="fa fa-unlock-alt"></span>
+                                </div>
+                                <div class="content">
+                                    <div class="text"><span data-tkey="networkDifficulty">Difficulty</span> </div>
+                                    <div class="value"><span id="networkDifficultyKryptokrona">{{data["networkDifficulty"]}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Blockchain Height -->
+                        <div class="col-lg-3 col-sm-4">
+                            <div class="infoBox hoverExpandEffect mergedBg">
+                                <div class="icon">
+                                    <span class="fa fa-bars"></span>
+                                </div>
+                                <div class="content">
+                                    <div class="text"><span data-tkey="blockchainHeight">Blockchain Height</span> </div>
+                                    <div class="value"><span id="blockchainHeightKryptokrona">{{data["networkHeight"]}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div id="minerStats" class="row">
+            <div class="col-lg-3 col-sm-4">
+                <div class="infoBox hoverExpandEffect">
+                    <div class="icon">
+                        <span class="fa fa-dashboard"></span>
+                    </div>
+                    <div class="content">
+                        <div class="text"><span data-tkey="AverageHashrate">Average Hashrate (H/s)</span></div>
+                        <div class="value"><span id="AverageHashrate" class="smallText">{{data["averageHashrate"]}}</span> <span class="smallText"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="col-lg-3 col-sm-4">
+                <div class="infoBox hoverExpandEffect">
+                    <div class="icon">
+                        <span class="fa fa-dashboard"></span>
+                    </div>
+                    <div class="content">
+                        <div class="text"><span data-tkey="acceptedShares">Accepted Shares</span></div>
+                        <div class="value"><span id="acceptedShares" class="smallText">{{data["acceptedShares"]}}</span> <span class="smallText"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="col-lg-3 col-sm-4">
+                <div class="infoBox hoverExpandEffect">
+                    <div class="icon">
+                        <span class="fa fa-dashboard"></span>
+                    </div>
+                    <div class="content">
+                        <div class="text"><span data-tkey="rejectedShares">Rejected Shares</span></div>
+                        <div class="value"><span id="rejectedShares" class="smallText">{{data["rejectedHashrate"]}}</span> <span class="smallText"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+        <div id="buttons1" class="row">
+            <form action="/miner" method="get" target="dummyframe">
+            <input type="hidden" id="command" name="command" value="restart">
+            <input type="submit" class="btn-primary" value="Restart">
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

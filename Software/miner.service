@@ -1,0 +1,13 @@
+[Unit]
+Description=XKRig Miner service
+After=network.service
+
+[Service]
+Type=simple
+WorkingDirectory=/miner
+ExecStart=xkrig --config=config.json
+RestartSec=15
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
