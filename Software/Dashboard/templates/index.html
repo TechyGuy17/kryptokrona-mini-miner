@@ -21,7 +21,8 @@
 
 <body>
     <div id="page-wrapper">
-        <h2>Kryptokrona Miner</h2>
+        <h1>Kryptokrona Miner</h1>
+        <h3>Network Statistics</h3>
         <div id="poolStats" class="row">
             <div id="Stats">  
                 <div id="networkStats"> 
@@ -33,7 +34,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text"><span data-tkey="networkHashrate">Network Hash Rate (H/s)</span> </div>
-                                    <div class="value"><span id="networkHashrateKryptokrona">{{data["networkHashrate"]}}</span></div>
+                                    <div class="value"><span id="networkHashrateKryptokrona">Loading...</span></div>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +45,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text"><span data-tkey="networkDifficulty">Difficulty</span> </div>
-                                    <div class="value"><span id="networkDifficultyKryptokrona">{{data["networkDifficulty"]}}</span></div>
+                                    <div class="value"><span id="networkDifficultyKryptokrona">Loading...</span></div>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +58,7 @@
                                 </div>
                                 <div class="content">
                                     <div class="text"><span data-tkey="blockchainHeight">Blockchain Height</span> </div>
-                                    <div class="value"><span id="blockchainHeightKryptokrona">{{data["networkHeight"]}}</span></div>
+                                    <div class="value"><span id="blockchainHeightKryptokrona">Loading...</span></div>
                                 </div>
                             </div>
                         </div>
@@ -65,6 +66,7 @@
                 </div>
             </div>
         </div>
+        <h3>Your statistics</h3>
         <div id="minerStats" class="row">
             <div class="col-lg-3 col-sm-4">
                 <div class="infoBox hoverExpandEffect">
@@ -72,8 +74,8 @@
                         <span class="fa fa-dashboard"></span>
                     </div>
                     <div class="content">
-                        <div class="text"><span data-tkey="AverageHashrate">Average Hashrate (H/s)</span></div>
-                        <div class="value"><span id="AverageHashrate" class="smallText">{{data["averageHashrate"]}}</span> <span class="smallText"></span>
+                        <div class="text"><span data-tkey="averageHashrate">Average Hashrate (H/s)</span></div>
+                        <div class="value"><span id="AverageHashrate" class="smallText">Loading...</span> <span class="smallText"></span>
                         </div>
                     </div>
                 </div>
@@ -85,7 +87,7 @@
                     </div>
                     <div class="content">
                         <div class="text"><span data-tkey="acceptedShares">Accepted Shares</span></div>
-                        <div class="value"><span id="acceptedShares" class="smallText">{{data["acceptedShares"]}}</span> <span class="smallText"></span>
+                        <div class="value"><span id="acceptedShares" class="smallText">Loading...</span> <span class="smallText"></span>
                         </div>
                     </div>
                 </div>
@@ -97,20 +99,124 @@
                     </div>
                     <div class="content">
                         <div class="text"><span data-tkey="rejectedShares">Rejected Shares</span></div>
-                        <div class="value"><span id="rejectedShares" class="smallText">{{data["rejectedHashrate"]}}</span> <span class="smallText"></span>
+                        <div class="value"><span id="rejectedShares" class="smallText">Loading...</span> <span class="smallText"></span>
                         </div>
                     </div>
                 </div>
             </div>  
         </div>
         <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-        <div id="buttons1" class="row">
+        <h3>Controls</h3>
+        <div id="buttons1" class="row input-group">
             <form action="/miner" method="get" target="dummyframe">
-            <input type="hidden" id="command" name="command" value="restart">
-            <input type="submit" class="btn-primary" value="Restart">
+                <input type="hidden" id="command" name="command" value="restart">
+                <input type="submit" class="btn btn-primary" value="Restart">
             </form>
+        </div>
+        <h3>Configuration</h3>
+        <h4>Pool Address (pool.example.com:3333)</h4>
+        <div>
+            <div class="input-group row">
+                <form action="/miner" method="get" target="dummyframe">
+                    <input type="hidden" id="comamnd" name="command" value="updatePool">
+                    <input class="form-control" id="updatePoolAddress" type="text" data-tplaceholder="enterNewPool" placeholder="Enter Your Pool address">
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </form>
+            </div>
+        </div>
+        <h4>Mining Address (SEKR....)</h4>
+        <div>
+            <div class="input-group row">
+                <form action="/miner" method="get" target="dummyframe">
+                    <input type="hidden" id="comamnd" name="command" value="updateAddress">
+                    <input class="form-control" id="updateAddress" type="text" data-tplaceholder="enterNewAddress" placeholder="Enter Your New Address">
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </form>
+            </div>
         </div>
 
     </div>
+    <script>
+        async function updateData() {
+            fetch("/stats")
+            .then(response => {
+                response.json()
+            })
+            .then(response => {
+                let averageHashrate = document.getElementById("averageHashrate")
+                averageHashrate.innerHTML = response.averageHashrate
+                
+                let acceptedShares = document.getElementById("acceptedShares")
+                acceptedShares.innerHTML = response.acceptedShares
+                
+                let rejectedShares = document.getElementById("rejectedShare")
+                rejectedShare.innerHTML = response.rejectedShare
+                
+            })
+            let node = await getBestNode()
+            fetch(node + "/info")
+            .then(response => {
+                response.json()
+            })
+            .then(response => {
+                let networkHashrateKryptokrona = document.getElementById("networkHashrateKryptokrona")
+                networkHashrateKryptokrona.innerHTML = response.hashrate
+                
+                let networkDifficultyKryptokrona = document.getElementById("networkDifficultyKryptokrona")
+                networkDifficultyKryptokrona.innerHTML = response.difficulty
+                
+                let blockchainHeightKryptokrona = document.getElementById("blockchainHeightKryptokrona")
+                blockchainHeightKryptokrona.innerHTML = response.height
+            })
+            
+        }
+        async function getBestNode(ssl = false) {
+            fetch('https://raw.githubusercontent.com/kryptokrona/kryptokrona-public-nodes/main/nodes.json')
+            .then(response => {
+                response.json()
+            }).then(async response => {
+                let nodelist = response
+                
+                let recommended_node = undefined;
+                let ssl_nodes =[];
+                if (ssl) {
+                    ssl_nodes = nodelist.nodes.filter(node => {return node.ssl});
+                } else {
+                    ssl_nodes =  nodelist.nodes.filter(node => {return !node.ssl});
+                }
+                
+                ssl_nodes = ssl_nodes.sort((a, b) => 0.5 - Math.random());
+                
+                
+                let i = 0;
+                
+                while (i < ssl_nodes.length) {
+                    
+                    
+                    let this_node = ssl_nodes[i];
+                    
+                    let nodeURL = `${this_node.ssl ? 'https://' : 'http://'}${this_node.url}:${this_node.port}/info`;
+                    try {
+                        const resp = await fetch(nodeURL, {
+                            method: 'GET',
+                        }, 2000);
+                        
+                        if (resp.ok) {
+                            
+                            recommended_node = `${this_node.url}:${this_node.port}`;
+                            console.log("resp ok!", recommended_node)
+                            return recommended_node;
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+                    i++;
+                }
+            })
+            return false
+            
+        }
+        setInterval(updateData, 10000)
+    </script>
 </body>
 </html>

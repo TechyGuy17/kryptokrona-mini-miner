@@ -8,21 +8,20 @@ app = Flask(__name__)
 @app.route('/')
 def render():
  try:
-    data = {}
-    res = requests.get('http://techy.ddns.net:11898/info')
-    response = res.json()
-    data["networkHashrate"] = response["hashrate"]
-    data["networkDifficulty"] = response["difficulty"]
-    data["networkHeight"] = response["height"]
+    return render_template("index.html")
+ except Exception as e: print(e)
+
+@app.route('/stats')
+def stats():
+ try:
+
 
     res = requests.get('http://localhost:8080/2/summary')
     response = res.json()
-    data["averageHashrate"] = response["hashrate"]["total"][0]
-    data["acceptedShares"] = response["connection"]["accepted"]
-    data["rejectedShares"] = response["connection"]["rejected"]
-    print(data)
-    return render_template("index.html", data=data)
+    return response
  except Exception as e: print(e)
+
+
 
 
 
@@ -39,9 +38,17 @@ def send():
         
         elif (request.args.get('command') == "start"):
              subprocess.run(["systemctl", "start", "miner"])
+        elif(request.args.get('command') == "updateAddress" and request.args.get('adress')):
+           with open('/miner/config.json') as f:
+              data = json.load(f)
+              for i in data["pools"]:
+                 i["user"] = request.args.get('address')
+        elif(request.args.get('command') == "updatePool" and request.args.get('adress')):
+           with open('/miner/config.json') as f:
+              data = json.load(f)
+              for i in data["pools"]:
+                 i["url"] = request.args.get('address')
                     
-        else:
-            stdout, stderr = (b"command not found", b"")
             
         return "ok"
 
